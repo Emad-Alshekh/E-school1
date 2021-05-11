@@ -1,0 +1,120 @@
+<!doctype html>
+ <html class="no-js" lang=""> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> تسجيل الدخول</title>
+    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css" />
+   
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <style>
+        .vh-100{
+            height: 100vh;
+        } button {
+     font-size: calc(12px + (13 - 12) * ((100vw - 360px) / (1600 - 320))) !important;
+ }
+ .btn-icon:hover {
+     background-color: #4682B4;
+     color: #fff !important;
+     border: 1px solid #ccc
+ }
+ #eye{
+     cursor:pointer;
+     float: right;
+  top: -30px;
+  position: relative;
+  left: -10px
+ }
+ .fa{
+     font-size: 20px;
+ }
+
+    </style>
+</head>
+<body class="bg-light vh-100">
+<div class="sufee-login d-flex align-content-center flex-wrap">
+    <div class="container">
+        <div class="row vh-100 d-flex justify-content-center align-items-center">
+            <div class="card col-12 col-md-6">
+                <div class="card-body">
+                    <div class="ml-auto mr-auto" style="width: 200px; margin: auto;">
+                        <a href="index.html">
+                            <img src="images/logo1.jpg" width="100%" height="100%"><br><br>
+                        </a>
+                    </div>
+                                        <div class="row justify-content-md-center">
+                    <div class="col col-lg-2">
+                    </div>
+                    <div class="col-md-auto">
+                        <button type="button" onclick="window.location = 'https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=116988994603-87oi7i8fv0ebom1jl9punh95h5ffgkd8.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Fasas4edu.com%2Fsocial_auth.php&state&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.login%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=auto';" class="btn btn-icon btn-block  "><span><img src="https://img.icons8.com/color/48/000000/google-logo.png" class="img-fluid mr-1" width="25"></span>Google التسجيل من خلال</button>
+                        <button style="cursor: pointer "type="button"  onclick="window.location = 'https://www.facebook.com/v2.10/dialog/oauth?client_id=150039383449798&state=30aa302fbb886961275a0ba8bd90b106&response_type=code&sdk=php-sdk-5.7.0&redirect_uri=https%3A%2F%2Fasas4edu.com%2Ffb_social_auth.php&scope=email';" class="btn btn-icon btn-block  "><span><img src="https://i.imgur.com/URmkevm.png" class="img-fluid mr-1" width="25"></span>Facebook التسجيل من خلال</button> 
+     
+                    </div>
+                    
+                    <br><br><br>
+                    <div class="row mt-3 mb-5 mx-0 px-0">
+                    
+
+                                    </div>
+                    <div class="col col-lg-2">
+                    </div>                                                         
+                  </div>
+                    <form action="" method="post">
+                    <div style="text-align: center;">أو</div>
+                        <div class="form-group">
+                            <label for="phone">Username</label>
+                            <input class="form-control" id="phone" type="text" name="tel" placeholder="phone number / email" autocomplete="off" required="required">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password</label>
+                            
+                            <span >
+                            <input class="form-control" id="pass" name="pass" type="password"  placeholder="password"autocomplete="off" required="required">      <i id="eye" class="fa fa-eye" onclick="toggle()" ></i> </input>
+                      
+                            </span>                        </div>
+                            <br>
+                        <div class="form-group text-right">
+                            <input class="btn btn-dark" type="submit" value="تسجيل الدخول" name="login">
+                        </div>
+                        
+                    </form>
+                   
+                    <p class="text-right">للتسجيل بحساب جديد:<a href="signup.html" style="font-size: 18px;"> انشاء حساب جديد</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var state = false;
+function toggle(){
+    if (state){
+        document.getElementById('pass').setAttribute('type', 'password');
+        document.getElementById('eye').style.color= "black";
+        state = false;
+    }else {
+        document.getElementById('pass').setAttribute('type', 'text');
+        document.getElementById('eye').style.color= "blue";
+        state = true;
+    }
+}
+</script>
+
+</body>
+</html>
